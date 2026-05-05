@@ -396,7 +396,7 @@
             <div class="brands-grid">
                 <div class="brand-card">
                     <span class="brand-logo">
-                        <img src="../Imagens/OTZ_Logo.jpg" alt="Logo OTZ Suplementos">
+                        <img src="../Imagens/Logo_NOVA_POSTER.jpg" alt="Logo OTZ Suplementos">
                     </span>
                     <span class="brand-name">OTZ Suplementos</span>
                 </div>
@@ -426,18 +426,18 @@
             {
                 title: 'Edição Viral',
                 description: 'Vídeo demonstrativo de uma landing page responsiva com animações, design moderno e call to action claros.',
-                video: 'https://www.w3schools.com/html/movie.mp4',
-                poster: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
+                video: '#',
+                poster: '',
                 tags: ['TikTok', 'YouTube' , 'Instagram'],
                 link: '#'
             },
             {
                 title: 'Vídeo para vendas',
-                description: 'Demonstração de fluxo de usuário, animações e integração com APIs para criar e organizar tarefas.',
-                video: 'https://www.w3schools.com/html/movie.mp4',
-                poster: 'https://images.pexels.com/photos/1181674/pexels-photo-1181674.jpeg?auto=compress&cs=tinysrgb&w=800',
+                description: 'Vídeo Recente que fiz!',
+                video: '../Vídeos/Carnaval-vem-aí-e-você-tem-que-se-manter.mp4',
+                poster: 'https://drive.google.com/file/d/1OpZW0IjKzuP3c5K2R6k6T2_hhO2wqml-/view?usp=sharing',
                 tags: ['Serviços', 'Produtos'],
-                link: '#'
+                link: 'https://youtube.com/shorts/EXlqxq6y73c?feature=share'
             },
         ];
 
@@ -461,13 +461,22 @@
                         ${project.tags ? project.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                     </div>
                     <div class="project-footer">
-                        <a class="project-link" href="${project.link}">Ver projeto</a>
+                        <a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
                         <span class="pill">Vídeo</span>
                     </div>
                 </div>
             `;
 
             grid.appendChild(card);
+
+            // Adicionar evento apenas para "Edição Viral"
+            if (project.title === 'Edição Viral') {
+                const link = card.querySelector('.project-link');
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Em breve!');
+                });
+            }
         });
     </script>
 </body>
