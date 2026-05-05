@@ -28,6 +28,8 @@
             min-height: 100vh;
         }
 
+        
+
         .page {
             max-width: 1180px;
             margin: 0 auto;
@@ -38,6 +40,53 @@
             display: grid;
             gap: 24px;
             padding: 48px 0 32px;
+            position: relative;
+        }
+
+        .profile-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .profile-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 189, 248, 0.1);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .profile-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .profile-cnpj {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-family: 'Courier New', monospace;
         }
 
         .intro {
@@ -276,20 +325,54 @@
             header {
                 padding-top: 32px;
             }
+
+            .profile-section {
+                position: static;
+                margin-bottom: 24px;
+            }
+
+            .profile-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-name {
+                font-size: 1rem;
+            }
+
+            .profile-cnpj {
+                font-size: 0.8rem;
+            }
         }
+
+        @media (min-width: 641px) {
+            .intro {
+                margin-left: 180px;
+            }
+        }
+       
     </style>
 </head>
 <body>
     <main class="page">
         <header>
+            <div class="profile-section">
+                <div class="profile-circle">
+                    <img src="../Imagens/sua_foto.jpg" alt="Foto de Moisés Ferreira">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name">Moisés Ferreira</div>
+                    <div class="profile-cnpj">CNPJ:63.368.214/0001-35</div>
+                </div>
+            </div>
             <div class="intro">
                 <span class="badge">Meus projetos</span>
-                <h1>Projetos realizados
+                <h1>Olá, seja bem-vindo!
                 </h1>
-                <p class="lead">Aqui você vai encontrar meus projetos mais recentes e os tipos de vídeo que edito</p>
+                <p class="lead" style="margin-top: 25px;">Aqui você vai encontrar meus projetos mais recentes e os tipos de vídeo que edito</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" onclick="window.location.href='page2.html'">Ver mais projetos</button>
-                    <button class="btn btn-secondary" onclick="alert('Em breve, aqui você poderá entrar em contato!')">Fale comigo</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='https://wa.me/75998736685'">Fale comigo</button>
                 </div>
             </div>
         </header>
@@ -297,7 +380,7 @@
         <section class="projects-section" id="projects">
             <div class="section-header">
                 <div>
-                    <h2>Projetos em Destaque</h2>
+                    <h2>Meu Portifólio</h2>
                     <p style="color:#94a3b8; margin-top:6px;">Aqui estão os meus maiores trabalhos até o momento.</p>
                 </div>
                 <span class="pill">Atualizado recentemente</span>
@@ -343,9 +426,9 @@
             {
                 title: 'Edição Viral',
                 description: 'Vídeo demonstrativo de uma landing page responsiva com animações, design moderno e call to action claros.',
-                video: 'https://www.w3schools.com/html/mov_bbb.mp4',
+                video: 'https://www.w3schools.com/html/movie.mp4',
                 poster: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
-                tags: ['TikTok', 'YouTube'],
+                tags: ['TikTok', 'YouTube' , 'Instagram'],
                 link: '#'
             },
             {
