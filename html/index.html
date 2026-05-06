@@ -139,18 +139,29 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent), #06b6d4);
+            background: linear-gradient(135deg, #22d3ee, #0ea5e9);
             color: #020617;
+            box-shadow: 0 18px 35px rgba(14, 165, 233, 0.24);
         }
 
         .btn-secondary {
-            background: rgba(148, 163, 184, 0.16);
+            background: rgba(148, 163, 184, 0.18);
             color: var(--text);
-            border: 1px solid rgba(148, 163, 184, 0.18);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            backdrop-filter: blur(8px);
         }
 
         .btn:hover {
-            transform: translateY(-1px);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.99);
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid rgba(56, 189, 248, 0.7);
+            outline-offset: 4px;
         }
 
         .projects-section {
@@ -371,8 +382,8 @@
                 </h1>
                 <p class="lead" style="margin-top: 25px;">Aqui você vai encontrar meus projetos mais recentes e os tipos de vídeo que edito</p>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" onclick="window.location.href='page2.html'">Ver mais projetos</button>
-                    <button class="btn btn-secondary" onclick="window.location.href='https://wa.me/75998736685'">Fale comigo</button>
+                    <button class="btn btn-primary" type="button" onclick="showComingSoon(event)">Ver mais projetos</button>
+                    <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/75998736685', '_blank', 'noopener,noreferrer')">Fale comigo</button>
                 </div>
             </div>
         </header>
@@ -478,6 +489,11 @@
                 });
             }
         });
+
+        function showComingSoon(event) {
+            event.preventDefault();
+            alert('Em breve!');
+        }
     </script>
 </body>
 </html>
