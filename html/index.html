@@ -37,25 +37,24 @@
         }
 
         header {
-            display: grid;
-            gap: 24px;
+            display: flex;
+            gap: 40px;
             padding: 48px 0 32px;
-            position: relative;
+            align-items: flex-start;
         }
 
         .profile-section {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 16px;
+            flex-shrink: 0;
         }
 
         .profile-circle {
-            width: 140px;
-            height: 140px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             border: 3px solid var(--accent);
             overflow: hidden;
@@ -92,6 +91,7 @@
         .intro {
             display: grid;
             gap: 18px;
+            flex: 1;
         }
 
         .badge {
@@ -328,23 +328,24 @@
             letter-spacing: 0.04em;
         }
 /*CSS do footter-->*/
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .page {
                 padding: 24px 16px 40px;
             }
 
             header {
                 padding-top: 32px;
+                flex-direction: column;
+                gap: 24px;
             }
 
             .profile-section {
-                position: static;
-                margin-bottom: 24px;
+                margin-bottom: 16px;
             }
 
             .profile-circle {
-                width: 100px;
-                height: 100px;
+                width: 160px;
+                height: 160px;
             }
 
             .profile-name {
@@ -356,9 +357,24 @@
             }
         }
 
-        @media (min-width: 641px) {
+        @media (max-width: 480px) {
+            header {
+                gap: 16px;
+            }
+
+            .profile-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+        }
+
+        @media (min-width: 769px) {
             .intro {
-                margin-left: 180px;
+                padding-top: 20px;
             }
         }
        
@@ -369,7 +385,7 @@
         <header>
             <div class="profile-section">
                 <div class="profile-circle">
-                    <img src="../Imagens/sua_foto.jpg" alt="Foto de Moisés Ferreira">
+                    <img src="../Imagens/IMG_9655(2).jpg" alt="Foto de Moisés Ferreira">
                 </div>
                 <div class="profile-info">
                     <div class="profile-name">Moisés Ferreira</div>
