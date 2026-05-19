@@ -19,6 +19,7 @@
                         linear-gradient(180deg, #020617 0%, #0b1120 100%);
             color: var(--text);
             min-height: 100vh;
+            font-family: 'Inter', sans-serif;
         }
 
         .page {
@@ -100,7 +101,7 @@
         h1 {
             font-size: clamp(2.5rem, 4vw, 4rem);
             line-height: 1.02;
-            
+            font-family: 'Inter', sans-serif;
         }
 
         p.lead {
@@ -391,7 +392,10 @@
                 <p class="badge">Aqui trabalho com edição de vídeo e estratégia para o seu perfil, acompanhando você em cada etapa.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" type="button" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">Ver mais projetos</button>
-                    <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/75998736685', '_blank', 'noopener,noreferrer')">Fale comigo</button>
+                    <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                        <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/75998736685', '_blank', 'noopener,noreferrer')">Fale comigo</button>
+                        <span style="color:#cbd5e1; font-size:0.95rem;">Ou WhatsApp: <strong>(75) 99873-6685</strong></span>
+                    </div>
                 </div>
             </div>
         </header>
