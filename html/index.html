@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem vindo ao meu PortifÃ³lio</title>
+    <title>Bem vindo ao meu Portifólio</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -14,21 +14,12 @@
             --shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 35%),
                         linear-gradient(180deg, #020617 0%, #0b1120 100%);
             color: var(--text);
             min-height: 100vh;
         }
-
-        
 
         .page {
             max-width: 1180px;
@@ -385,20 +376,20 @@
         <header>
             <div class="profile-section">
                 <div class="profile-circle">
-                    <img src="../Imagens/IMG_9655.jpg" alt="Foto de MoisÃ©s Ferreira">
+                    <img src="../Imagens/IMG_9655.jpg" alt="Foto de Moisés Ferreira">
                 </div>
                 <div class="profile-info">
-                    <div class="profile-name">MoisÃ©s Ferreira</div>
+                    <div class="profile-name">Moisés Ferreira</div>
                     <div class="profile-cnpj">CNPJ:63.368.214/0001-35</div>
                 </div>
             </div>
             <div class="intro">
                 <span class="badge">Meus projetos</span>
-                <h1>OlÃ¡, seja bem-vindo!
+                <h1>Olá, seja bem-vindo!
                 </h1>
-                <p class="badge">Aqui trabalho com ediÃ§Ã£o de vÃ­deo e estratÃ©gia para o seu perfil, acompanhando vocÃª em cada etapa.</p>
+                <p class="badge">Aqui trabalho com edição de vídeo e estratégia para o seu perfil, acompanhando você em cada etapa.</p>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" type="button" onclick="showComingSoon(event)">Ver mais projetos</button>
+                    <button class="btn btn-primary" type="button" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">Ver mais projetos</button>
                     <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/75998736685', '_blank', 'noopener,noreferrer')">Fale comigo</button>
                 </div>
             </div>
@@ -407,14 +398,14 @@
         <section class="projects-section" id="projects">
             <div class="section-header">
                 <div>
-                    <h2>Meu PortifÃ³lio</h2>
-                    <p style="color:#94a3b8; margin-top:6px;">Aqui estÃ£o os meus maiores trabalhos atÃ© o momento.</p>
+                    <h2>Meu Portifólio</h2>
+                    <p style="color:#94a3b8; margin-top:6px;">Aqui estão os meus maiores trabalhos até o momento.</p>
                 </div>
                 <span class="pill">Atualizado recentemente</span>
             </div>
 
             <div class="project-grid" id="projectGrid">
-                <!-- Cards serÃ£o inseridos aqui dinamicamente -->
+                <!-- Cards serão inseridos aqui dinamicamente -->
             </div>
         </section>
 <!--HTML do footter-->
@@ -451,19 +442,19 @@
     <script>
         const projectsData = [
             {
-                title: 'EdiÃ§Ã£o Viral',
-                description: 'ConteÃºdo que viraliza!',
+                title: 'Edição Viral',
+                description: 'Conteúdo que viraliza!',
                 video: 'Videos/Preview.mp4',
-poster: '',
+                poster: '',
                 tags: ['TikTok', 'YouTube' , 'Instagram'],
-                link: '#'
+                link: 'https://youtube.com/shorts/TRbtRpOrjmk?si=CM9RmIMStxiI9CO4'
             },
             {
-                title: 'VÃ­deo para vendas',
-                description: 'VÃ­deo Recente que fiz!',
+                title: 'Vídeo para vendas',
+                description: 'Vídeo Recente que fiz!',
                 video: 'Videos/Carnaval.mp4',
-                poster: 'https://drive.google.com/file/d/1OpZW0IjKzuP3c5K2R6k6T2_hhO2wqml-/view?usp=sharing',
-                tags: ['ServiÃ§os', 'Produtos'],
+                poster: '',
+                tags: ['Serviços', 'Produtos'],
                 link: 'https://youtube.com/shorts/EXlqxq6y73c?feature=share'
             },
         ];
@@ -475,9 +466,9 @@ poster: '',
             card.className = 'project-card';
 
             card.innerHTML = `
-                <video autoplay muted loop playsinline poster="${project.poster}">
+                <video controls autoplay muted loop playsinline poster="${project.poster}">
                     <source src="${project.video}" type="video/mp4">
-                    Seu navegador nÃ£o suporta vÃ­deo.
+                    Seu navegador não suporta vídeo.
                 </video>
                 <div class="project-content">
                     <div>
@@ -489,31 +480,17 @@ poster: '',
                     </div>
                     <div class="project-footer">
                         <a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-                        <span class="pill">VÃ­deo</span>
+                        <span class="pill">Vídeo</span>
                     </div>
                 </div>
             `;
 
             grid.appendChild(card);
-
-            // Adicionar evento apenas para "EdiÃ§Ã£o Viral"
-            if (project.title === 'EdiÃ§Ã£o Viral') {
-                const link = card.querySelector('.project-link');
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Em breve!');
-                });
-            }
         });
 
-        function showComingSoon(event) {
-            event.preventDefault();
-            alert('Em breve!');
-        }
     </script>
 </body>
 </html>
-
 
 
 
