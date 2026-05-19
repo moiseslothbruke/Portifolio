@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem vindo ao meu Portifólio</title>
+    <title>Bem vindo ao meu PortifÃ³lio</title>
     <style>
         :root {
             --bg: #0f172a;
@@ -385,18 +385,18 @@
         <header>
             <div class="profile-section">
                 <div class="profile-circle">
-                    <img src="../Imagens/IMG_9655.jpg" alt="Foto de Moisés Ferreira">
+                    <img src="../Imagens/IMG_9655.jpg" alt="Foto de MoisÃ©s Ferreira">
                 </div>
                 <div class="profile-info">
-                    <div class="profile-name">Moisés Ferreira</div>
+                    <div class="profile-name">MoisÃ©s Ferreira</div>
                     <div class="profile-cnpj">CNPJ:63.368.214/0001-35</div>
                 </div>
             </div>
             <div class="intro">
                 <span class="badge">Meus projetos</span>
-                <h1>Olá, seja bem-vindo!
+                <h1>OlÃ¡, seja bem-vindo!
                 </h1>
-                <p class="badge">Aqui trabalho com edição de vídeo e estratégia para o seu perfil, acompanhando você em cada etapa.</p>
+                <p class="badge">Aqui trabalho com ediÃ§Ã£o de vÃ­deo e estratÃ©gia para o seu perfil, acompanhando vocÃª em cada etapa.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" type="button" onclick="showComingSoon(event)">Ver mais projetos</button>
                     <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/75998736685', '_blank', 'noopener,noreferrer')">Fale comigo</button>
@@ -407,14 +407,14 @@
         <section class="projects-section" id="projects">
             <div class="section-header">
                 <div>
-                    <h2>Meu Portifólio</h2>
-                    <p style="color:#94a3b8; margin-top:6px;">Aqui estão os meus maiores trabalhos até o momento.</p>
+                    <h2>Meu PortifÃ³lio</h2>
+                    <p style="color:#94a3b8; margin-top:6px;">Aqui estÃ£o os meus maiores trabalhos atÃ© o momento.</p>
                 </div>
                 <span class="pill">Atualizado recentemente</span>
             </div>
 
             <div class="project-grid" id="projectGrid">
-                <!-- Cards serão inseridos aqui dinamicamente -->
+                <!-- Cards serÃ£o inseridos aqui dinamicamente -->
             </div>
         </section>
 <!--HTML do footter-->
@@ -449,39 +449,35 @@
     </main>
 <!--HTML do footter-->
     <script>
-        const projects = [
+        const projectsData = [
             {
-                title: 'Edição Viral',
-                description: 'Conteúdo que viraliza!',
-<<<<<<< HEAD
-                video: '../Vídeos/Edição Viral.mp4',
-=======
-                video: '../Vídeos/Preview.mp4',
->>>>>>> ac0ca6a8d073e415f3676ac2863c1c349dec58cd
-                poster: '',
+                title: 'EdiÃ§Ã£o Viral',
+                description: 'ConteÃºdo que viraliza!',
+                video: '../Videos/Preview.mp4',
+poster: '',
                 tags: ['TikTok', 'YouTube' , 'Instagram'],
                 link: '#'
             },
             {
-                title: 'Vídeo para vendas',
-                description: 'Vídeo Recente que fiz!',
-                video: '../Vídeos/Carnaval-vem-aí-e-você-tem-que-se-manter.mp4',
+                title: 'VÃ­deo para vendas',
+                description: 'VÃ­deo Recente que fiz!',
+                video: '../Videos/Carnaval-vem-aÃ­-e-vocÃª-tem-que-se-manter.mp4',
                 poster: 'https://drive.google.com/file/d/1OpZW0IjKzuP3c5K2R6k6T2_hhO2wqml-/view?usp=sharing',
-                tags: ['Serviços', 'Produtos'],
+                tags: ['ServiÃ§os', 'Produtos'],
                 link: 'https://youtube.com/shorts/EXlqxq6y73c?feature=share'
             },
         ];
 
         const grid = document.getElementById('projectGrid');
 
-        projects.forEach(project => {
+        projectsData.forEach(project => {
             const card = document.createElement('article');
             card.className = 'project-card';
 
             card.innerHTML = `
                 <video autoplay muted loop playsinline poster="${project.poster}">
                     <source src="${project.video}" type="video/mp4">
-                    Seu navegador não suporta vídeo.
+                    Seu navegador nÃ£o suporta vÃ­deo.
                 </video>
                 <div class="project-content">
                     <div>
@@ -493,15 +489,15 @@
                     </div>
                     <div class="project-footer">
                         <a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-                        <span class="pill">Vídeo</span>
+                        <span class="pill">VÃ­deo</span>
                     </div>
                 </div>
             `;
 
             grid.appendChild(card);
 
-            // Adicionar evento apenas para "Edição Viral"
-            if (project.title === 'Edição Viral') {
+            // Adicionar evento apenas para "EdiÃ§Ã£o Viral"
+            if (project.title === 'EdiÃ§Ã£o Viral') {
                 const link = card.querySelector('.project-link');
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -517,3 +513,7 @@
     </script>
 </body>
 </html>
+
+
+
+
